@@ -1,14 +1,12 @@
 package com.tusdatos.client;
 
+import com.tusdatos.configuration.properties.TusDatosProperties;
 import io.netty.channel.ConnectTimeoutException;
 import io.netty.handler.timeout.TimeoutException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.ExchangeFilterFunction;
-import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.WebClientRequestException;
-import org.springframework.web.reactive.function.client.WebClientResponseException;
+import org.springframework.web.reactive.function.client.*;
 import reactor.core.publisher.Mono;
 import reactor.util.retry.Retry;
 
@@ -17,12 +15,19 @@ import java.time.Duration;
 
 @Slf4j
 @Service
-public final class TusDatosApiRest implements ApiRestClient {
+@RefreshScope
+public class TusDatosApiRest implements ApiRestClient {
 
     private final WebClient webClient;
 
-    public TusDatosApiRest(final WebClient webClient, ExchangeFilterFunction authentication, @Value("${configuration.tusdatos.url}") String urlBase) {
-        this.webClient = webClient.mutate().baseUrl(urlBase).filter(authentication).build();
+    public TusDatosApiRest(final WebClient webClient,
+                           TusDatosProperties tusDatosProperties) {
+        log.info("TusDatosApiRest started");
+        this.webClient = webClient.
+                mutate().
+                baseUrl(tusDatosProperties.getUrl()).
+                filter(ExchangeFilterFunctions.basicAuthentication(tusDatosProperties.getUser(), tusDatosProperties.getPassword()))
+                .build();
     }
 
     @Override
