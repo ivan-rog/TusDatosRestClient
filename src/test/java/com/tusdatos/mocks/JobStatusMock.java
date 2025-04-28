@@ -1,0 +1,133 @@
+package com.tusdatos.mocks;
+
+public class JobStatusMock {
+
+    public static String jobStatusCC11() {
+        return """
+                {
+                  "cedula" : "111",
+                  "error" : false,
+                  "errores" : [ ],
+                  "estado" : "finalizado",
+                  "hallazgo" : true,
+                  "hallazgos" : "Alto",
+                  "id" : "651c2ede72476080772781f5",
+                  "nombre" : "MIGUEL FERNANDO PEREZ GOMEZ",
+                  "results" : {
+                    "Analisis Reputacional" : true,
+                    "Asociaciones Profesionales" : true,
+                    "CIDOB Peps nivel mundial" : true,
+                    "Concordato de Supersociedades" : true,
+                    "Consejo de Seguridad de la Naciones Unidas (ONU)" : true,
+                    "Contadores Sancionados" : true,
+                    "Contraloría General de la Republica (Consulta en Linea)" : true,
+                    "Contratación Pública en SECOP1 " : true,
+                    "Contratación Pública en SECOP2 " : true,
+                    "DIAN (Proveedores Ficticios)" : true,
+                    "Delitos sexuales contra menores de edad" : true,
+                    "Empresas y Personas Sancionadas Banco Interamericano de Desarrollo (IADB)" : true,
+                    "European Union Most Wanted List (EUROPOL)" : true,
+                    "Fondo de Pensiones Publicas (FOPEP)" : true,
+                    "Histórico de multas en Bogotá (SIMUR)" : true,
+                    "Instituto Nacional Penitenciario y Carcelario (INPEC)" : true,
+                    "Juzgados Tyba - Justicia XXI" : true,
+                    "Libreta Militar" : true,
+                    "Lista Clinton (OFAC), Busqueda por Documento (Consulta en Línea)" : true,
+                    "Lista Clinton (OFAC), Busqueda por Nombre (Consulta en Línea)" : true,
+                    "Listado del Banco Mundial de empresas e individuos no elegibles" : true,
+                    "Listas y PEPs (Personas Expuestas Políticamente), Busqueda por Documento" : true,
+                    "Listas y PEPs (Personas Expuestas Políticamente), Busqueda por Nombre" : true,
+                    "Offshore Leaks Database (ICJI)" : true,
+                    "Organización Internacional de Policía Criminal (INTERPOL)" : true,
+                    "Personeria de Bogota" : true,
+                    "Policia Nacional de Colombia" : true,
+                    "Procuraduría General de la Nación (Consulta en Linea)" : true,
+                    "RGM Registro de Garantías Mobiliarias" : true,
+                    "Rama Judicial Unificada, Busqueda por Nombre" : true,
+                    "Registraduría Nacional del Estado Civil" : true,
+                    "Registro Nacional de Carga (RNDC)" : true,
+                    "Registro Nacional de Medidas Correctivas (RNMC)" : true,
+                    "Registro Único Empresarial y Social (RUES)" : true,
+                    "Registro Único Nacional de Tránsito (RUNT)" : true,
+                    "Registro Único Tributario (RUT)" : true,
+                    "Sancionados contratación pública SECOP" : true,
+                    "Servicio Nacional de Aprendizaje (SENA)" : true,
+                    "Sistema Integrado de Multas y Sanciones de Transito (SIMIT)" : true,
+                    "Sistema de Información de Conductores que Transportan Mercancías Peligrosa (SISCONMP)" : true,
+                    "Sistema de Información del Registro Nacional de Abogados (SIRNA)" : true,
+                    "Sistema de Información y Gestión del Empleo Público (SIGEP)" : true,
+                    "Sistema de Seguridad Social Subsidiado (SISBEN)" : true,
+                    "Vehículos inmovilizados Bogotá" : true
+                  },
+                  "time" : 42.67135,
+                  "typedoc" : "CC",
+                  "validado" : true
+                }
+                """;
+    }
+
+    public static String jobStatusCC11WithError() {
+        return """
+                {
+                    "cedula": 111,
+                    "error": true,
+                    "errores": ["interpol"],
+                    "estado": "finalizado",
+                    "hallazgo": true,
+                    "hallazgos": "Alto",
+                    "id": "651c2ede72476080772781f5",
+                    "nombre": "MIGUEL FERNANDO PEREZ GOMEZ",
+                    "results": {
+                        "Analisis Reputacional": true,
+                        "Asociaciones Profesionales": true,
+                        "CIDOB Peps nivel mundial": true,
+                        "Concordato de Supersociedades": true,
+                        "Consejo de Seguridad de la Naciones Unidas (ONU)": true,
+                        "Contadores Sancionados": true,
+                        "Contraloría General de la Republica (Consulta en Linea)": true,
+                        "Contratación Pública en SECOP1 ": true,
+                        "Contratación Pública en SECOP2 ": true,
+                        "DIAN (Proveedores Ficticios)": true,
+                        "Delitos sexuales contra menores de edad": true,
+                        "Empresas y Personas Sancionadas Banco Interamericano de Desarrollo (IADB)": true,
+                        "European Union Most Wanted List (EUROPOL)": true,
+                        "Fondo de Pensiones Publicas (FOPEP)": true,
+                        "Histórico de multas en Bogotá (SIMUR)": true,
+                        "Instituto Nacional Penitenciario y Carcelario (INPEC)": true,
+                        "Juzgados Tyba - Justicia XXI": true,
+                        "Libreta Militar": true,
+                        "Lista Clinton (OFAC), Busqueda por Documento (Consulta en Línea)": true,
+                        "Lista Clinton (OFAC), Busqueda por Nombre (Consulta en Línea)": true,
+                        "Listado del Banco Mundial de empresas e individuos no elegibles": true,
+                        "Listas y PEPs (Personas Expuestas Políticamente), Busqueda por Documento": true,
+                        "Listas y PEPs (Personas Expuestas Políticamente), Busqueda por Nombre": true,
+                        "Offshore Leaks Database (ICJI)": true,
+                        "Organización Internacional de Policía Criminal (INTERPOL)": true,
+                        "Personeria de Bogota": true,
+                        "Policia Nacional de Colombia": true,
+                        "Procuraduría General de la Nación (Consulta en Linea)": true,
+                        "RGM Registro de Garantías Mobiliarias": true,
+                        "Rama Judicial Unificada, Busqueda por Nombre": true,
+                        "Registraduría Nacional del Estado Civil": true,
+                        "Registro Nacional de Carga (RNDC)": true,
+                        "Registro Nacional de Medidas Correctivas (RNMC)": true,
+                        "Registro Único Empresarial y Social (RUES)": true,
+                        "Registro Único Nacional de Tránsito (RUNT)": true,
+                        "Registro Único Tributario (RUT)": true,
+                        "Sancionados contratación pública SECOP": true,
+                        "Servicio Nacional de Aprendizaje (SENA)": true,
+                        "Sistema Integrado de Multas y Sanciones de Transito (SIMIT)": true,
+                        "Sistema de Información de Conductores que Transportan Mercancías Peligrosa (SISCONMP)": true,
+                        "Sistema de Información del Registro Nacional de Abogados (SIRNA)": true,
+                        "Sistema de Información y Gestión del Empleo Público (SIGEP)": true,
+                        "Sistema de Seguridad Social Subsidiado (SISBEN)": true,
+                        "Vehículos inmovilizados Bogotá": true
+                    },
+                    "time": 42.67135,
+                    "typedoc": "CC",
+                    "validado": true
+                }
+                """;
+    }
+
+}
