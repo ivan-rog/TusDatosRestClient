@@ -1,4 +1,4 @@
-package com.tusdatos.properties;
+package com.tusdatos.configuration.properties;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

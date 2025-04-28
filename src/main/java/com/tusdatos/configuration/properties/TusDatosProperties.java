@@ -1,4 +1,4 @@
-package com.tusdatos.properties;
+package com.tusdatos.configuration.properties;
 
 import lombok.Getter;
 import lombok.Setter;
