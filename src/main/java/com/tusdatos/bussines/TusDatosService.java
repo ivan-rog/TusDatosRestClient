@@ -72,7 +72,7 @@ public class TusDatosService {
                                 ? handleRetriesIfNecessary(currentJobStatusresponseDTO)
                                 : Mono.empty()
                 )
-                .take(4)
+                .take(properties.getNumberOfRetries())
                 .last();
     }
 
