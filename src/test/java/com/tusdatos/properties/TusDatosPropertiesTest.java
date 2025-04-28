@@ -1,5 +1,6 @@
 package com.tusdatos.properties;
 
+import com.tusdatos.configuration.properties.TusDatosProperties;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ class TusDatosPropertiesTest {
     private TusDatosProperties tusDatosProperties;
 
     @Test
-    @Tag("tus_")
+    @Tag("tus_datos")
     void testTusDatosProperties() {
         assertNotNull(tusDatosProperties);
         assertEquals("http://localhost:9090", tusDatosProperties.getUrl());
