@@ -30,5 +30,6 @@ public class TusDatosProperties {
     @DurationUnit(ChronoUnit.SECONDS)
     private Duration jobStatusTimeoutSeconds;
     private List<String> retryErrors;
+    private int numberOfRetries;
 
 }
